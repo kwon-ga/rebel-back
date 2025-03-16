@@ -10,12 +10,31 @@ DB_PASSWORD
 DB_NAME
 ```
 
+</br>
+
+---
+
 `실행 방법`
 
 ```
 npm install
+```
+
+`/src/app.module.ts` 16번째 라인의 값을 true로 바꿔주고 데이터 베이스 스키마를 동기화시킵니다.
+
+> synchronize란? (TypeORM 옵션)
+
+TypeORM에서 **synchronize: true**를 설정하면, 애플리케이션이 실행될 때 엔티티(Entity) 구조와 데이터베이스 스키마를 자동으로 동기화합니다.
+
+```
 npm run dev
 ```
+
+동기화를 확인한 후 `/src/app.module.ts` 16번째 라인의 값을 false로 수정합니다.
+
+</br>
+
+---
 
 `참고 사항`
 
@@ -23,7 +42,7 @@ npm run dev
 
 ```json
 "base_info": {
-    "default_port": 3000,
+    "node": "v18.18.0",
     "base_framework": "Nest",
     "ORM": "typeORM"
 },
